@@ -1,5 +1,3 @@
-// https://dev.to/karankumarjs/creating-todo-list-using-vanilla-javascript-2l7l
-
 // Variables
 const container = document.querySelector('.container');
 const newTaskInput = document.getElementById('new_task_input')
