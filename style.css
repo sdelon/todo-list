@@ -12,6 +12,7 @@
   --theme-transition: 0s;
   
   --padding : 1rem;
+  --spacing: 1.5rem;
 
   --body-font: 'Shadows Into Light', cursive;
 }
@@ -28,17 +29,18 @@ body {
 
 .content {
   flex: 1 1 auto;
-  margin: calc(var(--padding) * 2);
-}
-
-.content header {
   display: flex;
   flex-direction: column;
+  align-content: flex-start;
+  justify-content: center;
+  align-items: center;
+  max-width: 70vw;
 }
 
 .heading {
   font-weight: 900;
   color: var(--text-color);
+  margin-bottom: calc(var(--padding) * 3);
 }
 
 .heading {
@@ -63,7 +65,7 @@ body {
 .task_item:hover {
   transition: 0.5s;
   cursor: pointer;
-  background-color: #8ebbbe;
+  background-color: #a8c3c5;
   color: var(--text-color);
 }
 
@@ -104,16 +106,15 @@ footer {
 }
 
 footer form {
-  text-align: center;
   display: flex;
-  flex-flow: row wrap;
-  align-content: center;
-  justify-content: center;
-  margin: 1rem;
+  flex-wrap: wrap;
+  gap: var(--spacing);
+  max-width: 550px;
+  margin: 0 auto;
 }
 
-#new_task_input {
-  min-width: 350px;
+input[type=text] {
+  flex: 1 1 350px;
   font-size: 1.2rem;
   color: white;
   background-color: transparent;
@@ -121,22 +122,20 @@ footer form {
   border-bottom: 1px rgba(255, 255, 255, 0.267) solid;
 }
 
-#new_task_input::placeholder {
+input[type=text]::placeholder {
   color: rgba(255, 255, 255, 0.589);
   font-size: 1.2rem;
   font-family: var(--body-font);
 }
 
-#new_task_input_btn {
-  width: 2rem;
-  height: 2rem;
-  margin-left: 3rem;
-  background-color: transparent;
+input#new_task_input_btn[type=submit] {
+  flex: 1 1 100px;
+  background-color: var(--tache-color);
   border: none;
-  background-image: url('svg/new.svg');
-  background-repeat: no-repeat;
-  background-size: 80%;
   cursor: pointer;
+  padding: 0.5rem calc(var(--padding) * 3);
+  font-size: 1.3rem;
+  color: var(--bg-light-color);
 }
 
 .taskCompleted {
