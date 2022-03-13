@@ -11,6 +11,8 @@
   --filter: none;
   --theme-transition: 0s;
   
+  --padding : 1rem;
+
   --body-font: 'Shadows Into Light', cursive;
 }
 
@@ -21,10 +23,12 @@ body {
   height: 100vh;
   justify-content: space-between;
   align-items: center;
+  margin: 0;
 }
 
 .content {
   flex: 1 1 auto;
+  margin: calc(var(--padding) * 2);
 }
 
 .content header {
@@ -37,55 +41,21 @@ body {
   color: var(--text-color);
 }
 
-.theme_toogle {
-  text-align: right;
-  margin-right: -15px;
-
-}
-
-.theme_toogle_btn {
-  min-width: 30px;
-  min-height: 30px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  background-image: var(--theme-btn);
-  background-repeat: no-repeat;
-  background-size: 80%;
-  background-position: center;
-  padding: 20px;
-  cursor: pointer;
-}
-
-.theme_toogle_btn:hover {
-  background-size: 85%;
-  transition: 0.5s;
-  transform: rotate(90deg);
-}
-
 .heading {
-  font-size: 30px;
-}
-
-.tasks {
-  margin: 20px 0px;
-  overflow: hidden;
-  padding-right: 15p;
-}
-
-#tasksList {
-  padding: 0px;
+  font-size: 2.5rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
 }
 
 .task_item {
   list-style-type: none;
   border: 1px var(--dark-bleu) solid;
-  padding: 10px;
+  padding: var(--padding);
   display: flex;
   flex-direction: row;
   align-items: center;
-  border-radius: 7px;
-  margin-bottom: 20px;
+  border-radius: 0.5rem;
+  margin-bottom: var(--padding);
   background-color: var(--tache-color);
   color: var(--bg-light-color);
 }
@@ -98,25 +68,24 @@ body {
 }
 
 .task_check_btn {
-  width: 10px;
-  height: 10px;
-  margin-right: 16px;
-  padding: 3px;
+  min-width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  margin-right: var(--padding);
   border: 2px var(--dark-bleu) solid;
   background-position: center;
   background-size: contain;
-  border-radius: 50%;
   cursor: pointer;
 }
 
 .task_check_btn:hover {
   background-image: url('svg/complete.svg');
-  /* opacity: 0.5; */
   filter: var(--filter);
 }
 
 .task_bio {
-  font-size: 18px;
+  font-size: 1.2rem;
+  letter-spacing: 0.05rem;
 }
 
 .task-completed {
@@ -125,27 +94,27 @@ body {
   text-decoration: line-through;
   color: rgb(150, 150, 150);
   opacity: 0;
-
 }
 
 footer {
   padding: 1rem;
   width: 100%;
   background-color: var(--footer-color);
+  margin: 0 auto;
 }
 
 footer form {
-  max-width: 500px;
+  text-align: center;
   display: flex;
-  flex-direction: row;
+  flex-flow: row wrap;
   align-content: center;
   justify-content: center;
+  margin: 1rem;
 }
 
 #new_task_input {
-  min-width: 250px;
-  margin-right: 40px;
-  font-size: 20px;
+  min-width: 350px;
+  font-size: 1.2rem;
   color: white;
   background-color: transparent;
   border: none;
@@ -154,13 +123,14 @@ footer form {
 
 #new_task_input::placeholder {
   color: rgba(255, 255, 255, 0.589);
-  font-size: 20px;
+  font-size: 1.2rem;
   font-family: var(--body-font);
 }
 
 #new_task_input_btn {
-  width: 30px;
-  height: 30px;
+  width: 2rem;
+  height: 2rem;
+  margin-left: 3rem;
   background-color: transparent;
   border: none;
   background-image: url('svg/new.svg');
