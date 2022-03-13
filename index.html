@@ -5,23 +5,26 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
     <title>Todo Liste</title>
   </head>
   <body>
-  <div class="container task_list_empty">
-      <header>
-          <h1 class="heading">Todo Liste</h1>
-      </header>
-      <section class="tasks">
-          <ul id="tasksList"></ul>
-      </section>
+      <div class="content">
+        <header>
+            <h1 class="heading">Todo Liste</h1>
+        </header>
+        <section class="tasks">
+            <ul id="tasksList"></ul>
+        </section>
+      </div>
       <footer>
           <form id="new_task_form">
               <input type="text" name="new_task_input" id="new_task_input" placeholder="Quelle tâche à effectuer voulez-vous ajouter ?" value="" />
               <button id="new_task_input_btn" type="submit"></button>
           </form>
       </footer>
-  </div>
   <script type="module" src="/main.js"></script>
 </body>
 </html>
