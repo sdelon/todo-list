@@ -1,9 +1,9 @@
 :root {
-  --primary-color: white;
-  --secondary-color: #1E1E1E;
-  --text-color: black;
-  --task-color: white;
-  --footer-color: #1E1E1E;
+  --bg-light-color: #f3f3f3;
+  --dark-bleu: #284B63;
+  --text-color: #353535;
+  --tache-color: #3C6E71;
+  --footer-color: #1f1e1e;
   --theme-btn: url('svg/Dark-theme-btn.svg');
   --container-bg: url('svg/Light-empty.svg');
   --complete-icon: url('svg/complete.svg');
@@ -36,7 +36,7 @@ body {
   height: 80vh;
   border-radius: 20px;
   overflow: hidden;
-  background: var(--primary-color);
+  background: var(--bg-light-color);
   transition: var(--theme-transition);
 }
 
@@ -100,23 +100,22 @@ header {
 
 .task_item {
   list-style-type: none;
-  border: 1px var(--secondary-color) solid;
+  border: 1px var(--dark-bleu) solid;
   padding: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   border-radius: 7px;
   margin-bottom: 20px;
-  background-color: var(--task-color);
-  color: var(--text-color);
+  background-color: var(--tache-color);
+  color: var(--bg-light-color);
 }
 
 .task_item:hover {
   transition: 0.5s;
-  /* border: 1px rgba(148, 148, 148, 0.63) solid; */
   cursor: pointer;
-  background-color:rgba(226, 226, 226, 0.192);
-
+  background-color: #8ebbbe;
+  color: var(--text-color);
 }
 
 .task_check_btn {
@@ -124,8 +123,8 @@ header {
   height: 10px;
   margin-right: 16px;
   padding: 3px;
-  border: 2px var(--secondary-color) solid;
-  /* color: var(--primary-color); */
+  border: 2px var(--dark-bleu) solid;
+  /* color: var(--bg-light-color); */
   background-position: center;
   background-size: contain;
   border-radius: 50%;
