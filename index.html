@@ -14,16 +14,17 @@
   <body>
       <div class="content">
         <header>
-            <h1 class="heading">Todo Liste</h1>
+            <h1>Todo Liste</h1>
         </header>
-        <section class="tasks">
-            <ul id="tasksList"></ul>
+        <div class="todo-vide">Vous n'avez aucune tâche en cours !</div>
+        <section>
+            <ul id="liste_todo"></ul>
         </section>
       </div>
       <footer>
-          <form id="new_task_form">
-              <input type="text" name="new_task_input" id="new_task_input" placeholder="Quelle tâche voulez-vous ajouter ?" value="" />
-              <input id="new_task_input_btn" type="submit" value="créer" />
+          <form id="form_todo">
+              <input type="text" name="nouveau todo" id="nouveau_todo" placeholder="Quelle tâche voulez-vous ajouter ?" value="" />
+              <input class="nouveau-todo-btn" type="submit" value="créer" />
           </form>
       </footer>
   <script type="module" src="/main.js"></script>
