@@ -66,6 +66,7 @@ header h1 {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between;
   border-radius: 0.5rem;
   margin-bottom: var(--padding);
   background-color: var(--todo-color);
